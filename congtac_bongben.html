@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/bongden.js"></script>
+    <script src="js/congtac.js"></script>
+</head>
+<body>
+<button onclick="switch1.switchON();check()">bat</button>
+<button onclick="switch1.switchOff();check()">tat</button>
+<script>
+    function check() {
+        console.log('cong tac: ' + switch1.checkStatus());
+        console.log('bong den: '+ lamp1.checkStatus());
+    }
+    let switch1 = new SwitchButton(false);
+    let lamp1 = new ElectricLamp();
+    switch1.connectToLamp(lamp1);
+
+
+
+
+
+</script>
+</body>
+</html>
